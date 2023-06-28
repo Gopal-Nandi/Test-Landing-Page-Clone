@@ -7,6 +7,7 @@
     <title>My Website</title>
 
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media-queries.css">
 </head>
 
 <body>
@@ -32,16 +33,17 @@
                 <a href="#" class="tester-img">Become a tester</a>
             </div>
 
-            <div class="nav-link">
+            <div class="nav-link" id="nav-link">
                 <ul class="flex">
-                    <li><a href="#" class="hover-link">Products</a></li>
-                    <li><a href="#" class="hover-link">Customer</a></li>
+                    <li><a href="#" class="hover-link">Products <i class="fa-solid fa-angle-down"></i></a></li>
+                    <li><a href="#" class="hover-link">Customer </a></li>
                     <li><a href="#" class="hover-link">Pricing</a></li>
-                    <li><a href="#" class="hover-link">Resources</a></li>
-                    <li><a href="#" class="hover-link secondary-button">Sign in</a></li>
-                    <li><a href="#" class="hover-link primary-button">Sign up</a></li>
+                    <li><a href="#" class="hover-link">Resources <i class="fa-solid fa-angle-down"></i></a></li>
+                    <li><a href="#" class="hover-link secondary-button" id="nav-secondary-btn">Sign in</a></li>
+                    <li><a href="#" class="hover-link primary-button" id="nav-primary-btn">Sign up</a></li>
                 </ul>
             </div>
+            <a href="#" class="nav-toggle hover-link" id="nav-toggle"><i class="fa-solid fa-bars"></i></a>
         </div>
     </nav>
 
@@ -152,7 +154,7 @@
         </div>
     </section>
     <section class="big-feature-section container">
-        <div class="flex big-feature-container" style="flex-direction: row-reverse;">
+        <div class="flex big-feature-container" id="second-big-feature">
             <div class="feature-img">
                 <img src="./assets/asset 21.png" alt="">
             </div>
@@ -258,7 +260,7 @@
                     </div>
 
                     <div class="promotion-btn flex">
-                        <a href="#" class="primary-button">Try the panel calculator</a>
+                        <a href="#" class="primary-button" id="promotion-primary-btn">Try the panel calculator</a>
                         <p>or</p>
                         <a href="#" class="secondary-button promotion-sub-btn">Learn more</a>
                     </div>
@@ -339,6 +341,16 @@
     </div>
 
     <script src="https://kit.fontawesome.com/bec7640ec7.js" crossorigin="anonymous"></script>
+
+    <script>
+        const toggleButton = document.getElementById('nav-toggle')
+        const navLinks = document.getElementById('nav-link')
+
+        toggleButton.addEventListener('click', () => {
+            navLinks.classList.toggle('active')
+        })
+    </script>
+
 </body>
 
 </html>
